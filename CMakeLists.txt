@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.11)
+cmake_minimum_required(VERSION 3.11) # 3.11+ for FetchContent
 
 project(algorithm)
 
@@ -25,5 +25,9 @@ set(SOURCES
     src/main.cpp
 )
 
-add_executable(algorithm ${SOURCES})
-target_link_libraries(${PROJECT_NAME} raylib)
+add_subdirectory(lib/src/imgui)
+
+include_directories(lib/inc/imgui/)
+
+add_executable(${PROJECT_NAME} ${SOURCES})
+target_link_libraries(${PROJECT_NAME} raylib imgui)
