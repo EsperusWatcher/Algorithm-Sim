@@ -16,6 +16,6 @@ void Simulation::Start()
 void Simulation::Update()
 {
     BeginDrawing();
-    m_guiManager.DrawGUI();
+    m_guiManager.Update();
     EndDrawing();
 }
