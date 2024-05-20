@@ -23,11 +23,14 @@ endif()
 
 set(SOURCES
     src/main.cpp
+    src/gui.cpp
+    src/simulation.cpp
 )
 
 add_subdirectory(lib/src/imgui)
 
 include_directories(lib/inc/imgui/)
+include_directories(inc/)
 
 add_executable(${PROJECT_NAME} ${SOURCES})
 target_link_libraries(${PROJECT_NAME} raylib imgui)
