@@ -21,6 +21,9 @@ class GUI_Window
 public:
     virtual void DrawGUI();
     GUI_Manager *m_managerRef;
+private:
+    GUI_Window();
+    ImGuiWindowFlags m_windowFlags = 0;
 };
 
 class GUI_WindowMain : public GUI_Window
